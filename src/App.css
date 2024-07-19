@@ -1,38 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #011330; /* Changed to a darker background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Added to make the body take full height */
+}
+
 .App {
   text-align: center;
+  width: 1000px; /* Added a fixed width to the app container */
+  background: #6facd0; /* Added a white background to the app container */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added a subtle box shadow */
+  min-height: 50vh; /* Added to make the body take full height */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #212121; /* Changed to a darker text color */
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 500; /* Added font weight to make it bold */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todowrapper {
+  background: #6185cd; /* Changed to a white background */
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Added a subtle box shadow */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todoform {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.todo-input {
+  outline: none;
+  background: #f7f7f7; /* Changed to a lighter background color */
+  border: 1px solid #ddd; /* Changed to a lighter border color */
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 100%; /* Changed to take full width */
+  color: #333; /* Changed to a darker text color */
+  border-radius: 5px; /* Added border radius to make it rounded */
+}
+
+.todo-input::placeholder {
+  color: #ccc; /* Changed to a lighter text color */
+}
+
+.todo-btn {
+  background: #011330; /* Changed to a darker background color */
+  color: #fff;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+  width: 100%; /* Changed to take full width */
+  border-radius: 5px; /* Added border radius to make it rounded */
+}
+
+.todo-btn:hover {
+  background: #062a68; /* Added a hover effect */
+}
+
+.todo {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #fff; /* Changed to a white background */
+  color: #333; /* Changed to a darker text color */
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc; /* Added a bottom border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Added a subtle box shadow */
 }
 
-.App-link {
-  color: #61dafb;
+.fa-trash {
+  margin-left: 0.75rem;
+  color: #5c0909; /* Changed to a red color */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.incompleted {
+  color: #333; /* Changed to a darker text color */
+  cursor: pointer;
+}
+
+.completed {
+  color: #c5aeff;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+  margin: 0 0.5rem; /* Added some margin to the icons */
+}
+
+.edit-icon:hover,
+.delete-icon:hover {
+  color: #4CAF50; /* Added a hover effect to the icons */
+}
+
+/* Added some animations to make it more interactive */
+.todo-input:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-color: #4CAF50;
+}
+
+.todo-btn:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
